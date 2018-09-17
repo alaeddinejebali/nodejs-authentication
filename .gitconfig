@@ -1,0 +1,21 @@
+$ apt-get install git
+$ git config --global user.name "Ala Eddine JEBALI"
+$ git config --global user.email "jebali.alaeddine@gmail.com"
+
+# use gedit as default editor
+$ git config --global core.editor "gedit -w"
+# -w means: wait until I edit the file before you move on
+
+# add GIT autocomplete on Linux and Max (on Windows, it's activated by default)
+$ cd ~
+# download from Github
+$ curl -OL https://github.com/git/git/blob/master/contrib/completion/git-completion.bash
+
+# Rename file
+$ mv ~/git-completion.bash ~/.git-completion.bash
+
+# Edit ~/.bash_profile
+$ nano ~/.bash_profile
+if [ -f ~/.git-completion.bash ]; then
+    source ~/.git-completion.bash
+fi
